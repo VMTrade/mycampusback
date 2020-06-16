@@ -44,7 +44,7 @@ const onListening = () => {
 
 
 
-const port = normalizePort(process.env.PORT);
+app.set('port',process.env.PORT || 3000);
 
 app.on("error", onError);
 app.on("listening", onListening);
